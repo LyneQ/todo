@@ -8,18 +8,14 @@ export default function Form({addTodo}: FormProps) {
 
     const inputRef = useRef<HTMLInputElement>(null);
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault()
-        const inputElement: any = inputRef.current
-        //check if input is empty, if true stop execution
-        if( inputElement.value === '') return;
-        // call addTodo function parent component
-        addTodo(inputElement.value);
-        //reset state of input
-        inputElement.value = '';
-
-        console.log(inputElement.value)
-    }
+   const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const inputElement = inputRef.current;
+    if (inputElement && inputElement.value === '') return;
+    addTodo(inputElement!.value);
+    inputElement!.value = '';
+    localStorage.setItem('todos', localStorage.getItem('todos')?.toString() as string);
+}
 
     return (
         <>

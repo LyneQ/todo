@@ -65,5 +65,6 @@ This project is licensed under the MIT License.
 
 ## Todo (👀) 
 
+- correctly center the app vertically
 - add a button to view a task in a popup
 - add calendar view

@@ -8,14 +8,14 @@ function App() {
 
     const [todos, setTodos] = useState<TaskType[]>([]);
 
-   const createTodo = (taskName: string) => {
-    if (taskName !== '') {
-        const task = {id: todos.length, text: taskName, isCompleted: false};
-        const newTodos = [...todos, task];
-        setTodos(newTodos);
-        localStorage.setItem('todos', JSON.stringify(newTodos));
+    const createTodo = (taskName: string) => {
+        if (taskName !== '') {
+            const task = {id: todos.length, text: taskName, isCompleted: false};
+            const newTodos = [...todos, task];
+            setTodos(newTodos);
+            localStorage.setItem('todos', JSON.stringify(newTodos));
+        }
     }
-}
     const deleteTodo = (id: number) => {
         if (id === undefined) return;
         setTodos(todos.filter(todo => todo.id !== id))
@@ -56,6 +56,8 @@ function App() {
 
     return (
         <>
+            <img src={"./src/assets/img.png"} className={"appIcon"} alt={"icon of PeachyTodo representing a peach"}/>
+            <h1 className={"appNameContainer"}> Welcome to <span className={"appName"}>PeachyTodo</span></h1>
             <Form addTodo={createTodo}/>
             <h2> Todos </h2>
             <TodoList todos={todos} deleteTodo={deleteTodo}/>

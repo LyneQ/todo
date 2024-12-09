@@ -1,50 +1,69 @@
-# React + TypeScript + Vite
+# PeachyTodo 🍑
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **PeachyTodo**, a flavorful and modern task management application built with React.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+PeachyTodo is designed to help you manage your tasks efficiently with a dash of flavor. Whether you are keeping track of daily errands or planning big projects, TodoBite makes task management a breeze.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Add Tasks**: Quickly add tasks with a simple and intuitive interface.
+- **Delete Tasks**: Effortlessly remove completed or unnecessary tasks.
+- **Local Storage**: Your tasks are saved in the browser's local storage, so they persist between sessions.
+- **Responsive Design**: Access your task list seamlessly from both desktop and mobile devices.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+To get started with PeachyTodo, follow these steps:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. **Clone the repository:**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   ```bash
+   git clone https://github.com/Lyneq-Becode/intro-react
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd intro-react
+   ```
+
+3. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+4. **Run the application:**
+
+   ```bash
+   npm start
+   ```
+
+   This will start the development server and open TodoBite in your default web browser at `http://localhost:3000`.
+
+## Usage
+
+- **Adding Tasks:** Enter your task in the input box and hit 'Add Task' to include it in your list.
+- **Deleting Tasks:** Click on the delete icon next to a task to remove it from your list.
+- **Persistent Storage:** Your tasks will be saved automatically in your local storage.
+
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A strongly typed programming language that builds on JavaScript.
+- **Vite**: A build tool that provides fast development and production build processes.
+
+## Contributing
+
+Contributions are welcome! If you would like to contribute to TodoBite, please fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Todo (👀) 
+
+- add a button to view a task in a popup
+- add calendar view

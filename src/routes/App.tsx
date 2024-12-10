@@ -1,8 +1,7 @@
-import './App.css'
 import {useEffect, useState} from "react";
-import TodoList from "./components/TodoList.tsx";
-import Form from "./components/Form.tsx";
-import type {TaskType} from "./types/interface.d.ts";
+import TodoList from "../components/TodoList.tsx";
+import Form from "../components/Form.tsx";
+import type {TaskType} from "../types/interface.d.ts";
 
 function App() {
 
@@ -56,11 +55,16 @@ function App() {
 
     return (
         <>
-            <img src={"./src/assets/img.png"} className={"appIcon"} alt={"icon of PeachyTodo representing a peach"}/>
-            <h1 className={"appNameContainer"}> Welcome to <span className={"appName"}>PeachyTodo</span></h1>
-            <Form addTodo={createTodo}/>
-            <h2> Todos </h2>
-            <TodoList todos={todos} deleteTodo={deleteTodo}/>
+            <main className={"container"}>
+                <div className={"appNameContainer"}>
+                    <img src={"/peach.png"} className={"appIcon"}
+                         alt={"icon of PeachyTodo representing a peach"}/>
+                    <h1> Welcome to <span className={"appName"}>PeachyTodo</span></h1>
+                </div>
+                <Form addTodo={createTodo}/>
+                <h2> Todos </h2>
+                <TodoList todos={todos} deleteTodo={deleteTodo}/>
+            </main>
         </>
     )
 }

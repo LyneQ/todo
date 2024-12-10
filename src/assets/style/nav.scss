@@ -1,0 +1,47 @@
+@use "variables" as *;
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $background-color;
+    padding: 0.5em;
+    width: 100vw;
+    color: $font-color;
+    font-weight: bold;
+    border: none;
+    border-bottom: 1px solid $primary-color-hover;
+
+  position: fixed;
+  top:0;
+
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:0;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: 0.5em;
+            border-radius: 0.25em;
+            background-color: transparent;
+
+            a {
+                text-decoration: none;
+                color: $font-color;
+            }
+        }
+    }
+
+}

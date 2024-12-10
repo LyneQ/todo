@@ -41,14 +41,11 @@ function App() {
                 }
             ];
         } else {
-            console.log('getLocalStorage');
             return JSON.parse(todos);
         }
     }
 
     useEffect(() => {
-        console.log('useEffect')
-        console.table(getLocalStorage())
         setTodos(getLocalStorage())
         setLocalStorage(getLocalStorage())
     }, []);

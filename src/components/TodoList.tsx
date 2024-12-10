@@ -7,8 +7,6 @@ interface TodoListProps {
 }
 
 export default function TodoList({todos = [], deleteTodo}: TodoListProps) {
-
-    console.log(todos)
     return (
         <ul>
             {todos.map((todo) => (

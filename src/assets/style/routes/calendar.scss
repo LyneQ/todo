@@ -1,10 +1,31 @@
 @use "../variables" as *;
+
+section {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+
+  .appName {
+    margin: 0 auto;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: $primary-color;
+  }
+
+  .explanation {
+    //width: 50%;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
 .react-calendar {
     border: none;
     background-color: $background-color-secondary;
     color: $font-color;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: fit-content;
 }
 
 .react-calendar__navigation__label,

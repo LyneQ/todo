@@ -7,9 +7,9 @@ function App() {
 
     const [todos, setTodos] = useState<TaskType[]>([]);
 
-    const createTodo = (taskName: string) => {
+    const createTodo = (taskName: string, deadline: Date) => {
         if (taskName !== '') {
-            const task = {id: todos.length, text: taskName, isCompleted: false};
+            const task = {id: todos.length, text: taskName, deadline: deadline, isCompleted: false};
             const newTodos = [...todos, task];
             setTodos(newTodos);
             localStorage.setItem('todos', JSON.stringify(newTodos));
@@ -31,12 +31,14 @@ function App() {
             return [
                 {
                     id: 0,
-                    text: "Install AppName",
+                    text: "Install PeachyTodo",
+                    deadline: new Date(),
                     isCompleted: true
                 },
                 {
                     id: 1,
                     text: "Create a new task",
+                    deadline: new Date(),
                     isCompleted: false
                 }
             ];
@@ -49,6 +51,7 @@ function App() {
         setTodos(getLocalStorage())
         setLocalStorage(getLocalStorage())
     }, []);
+
 
     return (
         <>

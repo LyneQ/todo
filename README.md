@@ -63,8 +63,5 @@ Contributions are welcome! If you would like to contribute to TodoBite, please f
 
 This project is licensed under the MIT License.
 
-## Todo (👀) 
-
-- correctly center the app vertically
-- add a button to view a task in a popup
+## Todo (👀)
 - add calendar view

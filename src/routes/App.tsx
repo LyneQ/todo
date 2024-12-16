@@ -61,7 +61,7 @@ function App() {
                          alt={"icon of PeachyTodo representing a peach"}/>
                     <h1> Welcome to <span className={"appName"}>PeachyTodo</span></h1>
                 </div>
-                <Form addTodo={createTodo}/>
+                <Form addTodo={createTodo} />
                 <h2> Todos </h2>
                 <TodoList todos={todos} deleteTodo={deleteTodo}/>
             </main>

@@ -7,7 +7,7 @@ function App() {
 
     const [todos, setTodos] = useState<TaskType[]>([]);
 
-    const createTodo = (taskName: string, deadline: Date) => {
+    const createTodo = (taskName: string, deadline: any) => {
         if (taskName !== '') {
             const task = {id: todos.length, text: taskName, deadline: deadline, isCompleted: false};
             const newTodos = [...todos, task];

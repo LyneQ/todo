@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
 
 interface FormProps {
-    addTodo: (taskName: string, deadline: string | undefined) => void;
+    addTodo: (taskName: string, deadline: Date) => void;
 }
 
 export default function Form({addTodo}: FormProps) {
@@ -13,7 +13,7 @@ export default function Form({addTodo}: FormProps) {
     e.preventDefault();
     const inputElement = inputRef.current;
     if (inputElement && inputElement.value === '') return;
-    addTodo(inputElement!.value, deadlineRef.current?.value);
+    addTodo(inputElement!.value, deadlineRef.current?.value as unknown as Date);
     inputElement!.value = '';
     localStorage.setItem('todos', localStorage.getItem('todos')?.toString() as string);
 }

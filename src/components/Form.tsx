@@ -27,7 +27,9 @@ export default function Form({addTodo}: FormProps) {
                     placeholder="Write a new todo"
                     ref={inputRef}
                 />
-                <input type="date" name="deadline" ref={deadlineRef}/>
+                <div className={"input-date"}>
+                    <input type="date" name="deadline" ref={deadlineRef}/>
+                </div>
                 <button type="submit">Add todo</button>
             </form>
         </>

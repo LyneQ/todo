@@ -1,6 +1,6 @@
 # PeachyTodo 🍑
 
-Welcome to **PeachyTodo**, a flavorful and modern task management application built with React.
+Welcome to **[PeachyTodo](https://todo-eight-liard.vercel.app/)**, a flavorful and modern task management application built with React.
 
 ## Overview
 
@@ -62,6 +62,3 @@ Contributions are welcome! If you would like to contribute to TodoBite, please f
 ## License
 
 This project is licensed under the MIT License.
-
-## Todo (👀)
-- add calendar view
